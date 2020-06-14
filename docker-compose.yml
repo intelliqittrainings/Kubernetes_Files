@@ -1,0 +1,17 @@
+---
+version: '3'
+services:
+ mydb:
+  image: mysql:5
+  environment:
+   MYSQL_ROOT_PASSWORD: intelliqit
+
+ wordpress:
+  image: wordpress
+  ports:
+   - 9090:80
+
+  deploy:
+   replicas: 3
+...   
+
